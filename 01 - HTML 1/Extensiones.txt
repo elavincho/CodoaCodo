@@ -1,0 +1,18 @@
+- Instalar Plugins
+	- Spanish Language Pack for Visual Studio Code
+	MS-CEINTL.vscode-language-pack-es
+	
+	- Open in browser
+	techer.open-in-browser
+	
+	- Live Server
+	ritwickdey.LiveServer
+	
+	- Palenight Theme
+	whizkydee.material-palenight-theme
+	
+	- Andromeda
+	EliverLara.andromeda
+
+	- VSCode Icons
+	vscode-icons-team.vscode-icons
