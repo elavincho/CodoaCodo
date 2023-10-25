@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas y Tablas</title>
+
+    <style>
+        table,
+        td,
+        th {
+            border: solid blue;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Lista ordenada -->
+    <h2>Lista Ordenada</h2>
+    <!-- Para agregar varias listas al mismo tiempo, se colola el nombre de la etiqueta +asterisco + la 
+        cantidad de veces que quiero la etiqueta -->
+    <!-- li*6 + enter -->
+    <!-- ol: order list -->
+    <!-- li: list -->
+    <ol type="i" reversed>
+        <li>Opción 1</li>
+        <li>Opción 2</li>
+        <li>Opción 3</li>
+        <li>Opción 4</li>
+        <li>Opción 5</li>
+        <li>Opción 6</li>
+    </ol>
+    <!-- hr es una linea separatoria -->
+    <hr>
+
+    <!-- Lista desordenada -->
+    <h2>Lista desordenada</h2>
+    <!-- ul: unorder list -->
+    <ul>
+        <li style="list-style: georgian;">🙄Opción 1</li>
+        <li style="list-style: none;">Opción 2</li>
+        <li>Opción 3</li>
+    </ul>
+
+    <hr>
+
+    <!-- Lista Ordenada dependiente -->
+    <h2>Lista Ordenada dependiente</h2>
+    <ol type="A">
+        <li>Verano</li>
+        <ol type="I">
+            <li>Enero</li>
+            <li>Febrero</li>
+            <ul>
+                <li>Primera quincena</li>
+                <li>Segunda quincena</li>
+            </ul>
+            <li>Marzo</li>
+        </ol>
+        <li>Otoño</li>
+        <ol type="1">
+            <li>Abril</li>
+            <li>Mayo</li>
+            <li>Junio</li>
+        </ol>
+        <li>Invierno</li>
+        <ol type="a">
+            <li>Julio</li>
+            <li>Agosto</li>
+            <li>Septiembre</li>
+        </ol>
+        <li>Primavera</li>
+        <ol type="i">
+            <li>Octubre</li>
+            <li>Noviembre</li>
+            <li>Diciembre</li>
+        </ol>
+    </ol>
+    <hr>
+
+    <!-- Lista desordenada dependiente -->
+    <h2>Lista Desordenada dependiente</h2>
+    <ul>
+        <li>Lunes</li>
+        <ul>
+            <li>Mañana</li>
+            <li>Tarde</li>
+            <ul>
+                <li>14hs</li>
+                <li>16hs</li>
+                <li>18hs</li>
+            </ul>
+            <li>Noche</li>
+        </ul>
+        <li>Martes</li>
+        <ul>
+            <li>Mañana</li>
+            <li>Tarde</li>
+            <li>Noche</li>
+        </ul>
+        <li>Miércoles</li>
+        <ul>
+            <li>Mañana</li>
+            <li>Tarde</li>
+            <li>Noche</li>
+        </ul>
+    </ul>
+
+    <hr>
+
+    <!-- Lista de definición -->
+    <h2>Lista de Definición</h2>
+    <!-- dl: definition list -->
+    <!-- dt: definition title-->
+    <!-- dd: definition data-->
+    <dl>
+        <dt>HTML</dt>
+        <dd>Es el componente más básico de la Web. Define el significado y la estructura del contenido web. Además de
+            HTML, generalmente se utilizan otras tecnologías para describir la apariencia/presentación de una página web
+            (CSS) o la funcionalidad/comportamiento (JavaScript).</dd>
+        <br>
+        <dt>CSS</dt>
+
+        <dd>Es un lenguaje basado en reglas: cada usuario define las reglas que especifican los grupos de estilos que
+            van a aplicarse a elementos particulares o grupos de elementos de la página web. Por ejemplo: «Quiero que el
+            encabezado principal de mi página se muestre en letras grandes de color rojo».</dd>
+    </dl>
+
+    <hr>
+
+    <!-- TABLAS -->
+    <h2>Tablas</h2>
+    <table>
+        <!-- TR es Table Row, que son filas -->
+        <tr>
+            <!-- TH es Table Header, que son los títulos -->
+            <th>Titulo Columna 1</th>
+            <th>Titulo Columna 2</th>
+            <th>Titulo Columna 3</th>
+        </tr> <!-- Termina la primer fila  -->
+
+        <tr>
+            <!-- TD es Table Data, que es el contenido -->
+            <td>Celda 1x1</td>
+            <td>Celda 2x1</td>
+            <td>Celda 3x1</td>
+        </tr> <!-- Termina la segunda fila  -->
+
+        <tr>
+            <td>Celda 1x2</td>
+            <td>Celda 2x2</td>
+            <td>Celda 3x2</td>
+        </tr> <!-- Termina la tercer fila  -->
+
+    </table>
+    <!-- Una vez terminada, se agrega el style en el HEAD -->
+
+    <br>
+
+    <table>
+        <tr>
+            <th>Curso</th>
+            <th>Comisión</th>
+        </tr>
+        <tr>
+            <td>Fullstack</td>
+            <td>2123</td>
+        </tr>
+        <tr>
+            <td>Java</td>
+            <td>2598</td>
+        </tr>
+        <tr>
+            <td>Web</td>
+            <td>2254</td>
+        </tr>
+    </table>
+    <br>
+
+    <h2>Colspan</h2>
+    <table>
+        <tr>
+            <th>Curso</th>
+            <th>Comisión</th>
+        </tr>
+        <tr>
+            <!-- Elimino la comisión y dentro de TD agrego el atributo Colspan, con el nro indico cuantas columnas tengo que agrupar -->
+            <!-- colspan: convinar columnas -->
+            <td colspan="2">Fullstack</td>
+        </tr>
+        <tr>
+            <td>Java</td>
+            <td>2598</td>
+        </tr>
+        <tr>
+            <td>Web</td>
+            <td>2254</td>
+        </tr>
+    </table>
+
+    <br>
+
+
+    <h2>Rowspan</h2>
+    <!-- Rowspan: convinar filas -->
+    <!-- Hay que indicarle la cantidad de filas que se quiere convinar -->
+    <table>
+        <tr>
+            <th>Curso</th>
+            <th>Comisión</th>
+        </tr>
+        <tr>
+            <td colspan="2">Fullstack</td>
+
+        </tr>
+        <tr>
+            <!-- Rowspan es para unificar 2 filas -->
+            <td rowspan="2">Java</td>
+            <td>2598</td>
+        </tr>
+        <tr>
+            <!-- Borro el título de Web -->
+            <td>2254</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <!-- ENLACES -->
+    <h2>Enlaces</h2>
+    <a href="https://www.google.com">Google</a>
+    <br>
+    <!-- El target define donde se va a abrir el link -->
+    <a href="https://www.google.com" target="_blank">Ir a Google</a>
+    <br>
+
+    <!-- Creo la carpeta IMG y me guardo una imagen de VSC -->
+    <a href="img/visual.png">Enlace a una imagen</a>
+    <br>
+    <a href="mailto:mail@gmail.com">Enviar correo</a>
+    <br>
+    <a href="mailto:mail@gmail.com?subject=Contacto desde la web">Enviar correo</a>
+    <br>
+
+    <!-- Creo la carpeta ARCHIVOS y agrego un PDF -->
+    <a href="archivos/archivo.pdf">Abrir PDF</a>
+    <br>
+    <a href="archivos/archivo.pdf" download>Descargar PDF</a>
+    <br>
+</body>
+
+</html>
