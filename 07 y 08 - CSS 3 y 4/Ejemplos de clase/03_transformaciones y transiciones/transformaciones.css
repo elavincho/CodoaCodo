@@ -1,0 +1,40 @@
+*{
+    font-family: Verdana;
+}
+
+h1 {
+    color: blue;
+    background-color: lightblue;
+}
+
+h2 {
+    color: teal;
+    background-color: lightgreen;
+}
+
+.caja {
+    width: 100px;
+    height: 100px;
+    border: 2px solid red;
+    background-color: tomato;
+    text-align: center;
+}
+
+/*Traslación, traslada al elemento en X e Y*/
+.translate{
+    transform: translate(50px, 10px);
+}
+
+/*Transforma al elemento aumentando o achicando su tamaño*/
+.scale{transform: scale(1.4, 1.4);}
+
+/*Giran al elemento en el eje según los grados indicados*/
+.rotatex{transform: rotateX(45deg);}
+.rotatey{transform: rotateY(45deg);}
+.rotate{transform: rotate(45deg);}
+
+/*Deformaciones*/
+.skewx{transform: skewX(30deg);}
+
+.skewy{transform: skewY(30deg);}
+

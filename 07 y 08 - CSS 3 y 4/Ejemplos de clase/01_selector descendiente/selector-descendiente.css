@@ -1,0 +1,25 @@
+header nav{
+    border: 5px solid red;
+    background-color: olivedrab;
+}
+
+header nav dl{
+    border: 4px dotted darkolivegreen;
+    background-color: lightblue;
+    font-style: italic;
+}
+
+header p{
+    color: blue;
+    border: 2px solid black;
+    background-color: cadetblue; /*Color de back*/
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+div p{
+    color: green;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: lightgrey;
+}

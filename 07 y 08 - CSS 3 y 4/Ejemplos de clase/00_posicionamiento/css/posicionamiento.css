@@ -1,0 +1,49 @@
+
+.padre{
+    border: 1px solid black;
+    width: 50vw;
+    height: 50vh;
+    position: relative; /*Esto lo agrego para explicar el absoluto*/
+    margin: auto;
+}
+
+.relative{
+    background-color: blueviolet;
+    width: 150px;
+    height: 150px;
+    /*Si quiero por ej correrla, puedo poner margin: 5px, pero no esta bien pq no se trabaja así*/
+    position: relative; /*Sino lo defino como relative, no se me va a mover ya que es estático y responde al padre. Por eso le debemos definir la posición relativa.*/
+    /*Recién ahí voy a poder moverla, por ejemplo, der y abajo, mueve al revés*/
+    left: 50px;
+    top: 30px;
+}
+/*El posicionamiento relative, se mueve en función de su padre, no importa la posición que éste tenga.*/
+
+
+
+.absolute{
+    background-color: grey;
+    width: 150px;
+    height: 150px;
+    position: absolute; /*va a ir a buscar la posición q tenga el padre. Sino tiene una posición definida, lo busca en relación del html y se va arriba de todo.*/
+    /*Agrego en el padre el relative*/
+    top: 30px;
+}
+
+
+.fixed{
+    background-color: green;
+    width: 150px;
+    height: 150px;
+    position: fixed; /*se queda fijo en la ventana del navegador, como los malware que scrolleamos y se queda en el lugar*/
+    top: 150px;
+    left: 50px;
+}
+
+.sticky{
+    background-color: tomato;
+    width: 150px;
+    height: 150px;
+    position: sticky; /*se queda fijo en la ventana de su padre, es como el menú*/
+    top: 20px;
+}

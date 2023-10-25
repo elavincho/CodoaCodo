@@ -1,0 +1,8 @@
+/*----------- PSEUDOCLASES PARA ETIQUETAS < A > --------------*/
+
+a:link {color: red;} /*Color del link*/
+a:hover {background-color: yellow;} /*Cuando paso mouse por arriba*/
+a:visited {color: rgb(182, 182, 196);} /*Una vez visitado*/
+a:active {background-color: green; color: white;} /*Cuando doy click*/
+
+

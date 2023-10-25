@@ -1,0 +1,128 @@
+h3 {
+    font-family: 'Roboto';
+    text-transform: uppercase;
+}
+
+body {
+    font-family: 'Nunito Sans';
+    font-style: italic;
+    cursor: url(../img/camiseta-de-futbol.png), pointer !important;
+    /*Puntero del mouse*/
+}
+
+.fondo {
+    background-color: cornflowerblue;
+}
+
+/*----------- CONTENEDOR -----------*/
+.contenedor-principal {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/*----------- TARJETA -----------*/
+.tarjeta {
+    width: 300px;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: url(../img/pelota-argentina.png), pointer !important;
+    position: relative;
+    overflow: hidden;
+}
+
+/*----------- IMAGEN DE LA TARJETA -----------*/
+.tarjeta .imagen-contenedor {
+    width: 100%;
+    height: 170px;
+    position: relative;
+    overflow: hidden; /*desbordamiento*/
+    transition: all 0.2s; /*transición*/
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tarjeta:hover .imagen-contenedor {
+    transform: scale(1.1);
+}
+
+.tarjeta .imagen-contenedor::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    background: #0b7fba;
+    mix-blend-mode: multiply;
+    transform: translateX(-120%) skewX(-10deg);
+    transition: transform 0.3s ease-out;
+}
+
+.tarjeta:hover .imagen-contenedor::before {
+    transform: translateX(0) skewX(-10deg) scaleX(1.3);
+}
+
+/*----------- CUERPO PRINCIPAL -----------*/
+.tarjeta-cuerpo {
+    padding: 16px 16px 30px 16px;
+    transition: all 0.3s ease;
+    margin: 16px;
+}
+
+.tarjeta-cuerpo span {
+    font-weight: bold;
+}
+
+.leer-mas {
+    font-weight: 500;
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: #0b7fba;
+}
+
+.leer-mas span {
+    transition: transform 0.2s ease;
+}
+
+.tarjeta:hover .leer-mas {
+    color: black;
+}
+
+.tarjeta:hover {
+    background: #ffffff;
+    color: #0b7fba;
+}
+
+.tarjeta:hover span {
+    color: black;
+}
+
+.tarjeta::before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 5px;
+    width: 100%;
+    background: linear-gradient(to right, #0b7fba 50%, rgb(56, 62, 58) 50%);
+    background-size: 200%;
+    background-position: 100%;
+    background-repeat: no-repeat;
+    bottom: 0;
+    left: 0;
+    z-index: 9;
+    transition: all 0.5s;
+}
+
+.tarjeta:hover::before {
+    background-position: 0%;
+}
+
+::selection {
+    /*pseudoelemento para cuando seleccionas el texto */
+    background: lightblue;
+    color: #0b7fba;
+}

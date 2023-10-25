@@ -1,0 +1,12 @@
+/*----------- PSEUDOELEMENTOS --------------*/
+p::first-letter{color: red;}
+
+p::first-line{background-color: lightgreen;}
+
+p::selection{background-color: lightsalmon;}
+
+p::before{ content:"✨";}
+p::after{ content:"🙉";}
+/*Los emojis pueden encontrarse en https://emojipedia.org/*/
+
+

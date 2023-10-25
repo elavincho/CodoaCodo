@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    text-align: center ;
+    /*ESTO VA A LO ULTIMO*/
+    /*box-sizing: border-box; /*poniendolo acá hago que todas las cajas midan siempre lo mismo.*/
+}
+
+/*El margen es lo que separa a la caja con los elementos que estén al lado*/
+.margin{
+    text-align: center ;
+    background-color: turquoise;
+    width: 200px;
+    height: 150px;
+     /*margin: 10px; //Aplica a todos los lados*/
+    /*margin: 10px 15px; //Aplica arriba/abajo y derecha/izquierda*/
+    /*margin: 10px 15px 20px; //Aplica arriba derecha-izquierda y abajo*/
+    margin: 10px 15px 20px 25px; /*Aplica arriba siguiendo agujas del reloj*/ 
+}
+
+/*Son elementos en bloque, para lo cual se van a poner uno debajo del otro*/
+/*El padding es el relleno, va del contenido, al borde*/
+.padding{
+    text-align: center ;
+    background-color: green;
+    width: 200px;
+    height: 150px;
+    /*margin: 10px; //Aplica a todos los lados*/
+    /*margin: 10px 15px; //Aplica arriba/abajo y derecha/izquierda*/
+    /*margin: 10px 15px 20px; //Aplica arriba derecha-izquierda y abajo*/
+    margin: 10px 15px 20px 25px; /*Aplica arriba siguiendo agujas del reloj*/ 
+    padding: 30px; /*Aplica los mismos parametros q arriba*/
+    
+}
+
+.border{
+    text-align: center ;
+    background-color: violet;
+    width: 200px;
+    height: 150px;
+    border: 5px solid black; /*Aplica los mismos parametros q arriba*/
+}
+
+.caja-completa{
+    text-align: center ;
+    background-color: brown;
+    width: 200px;
+    height: 150px;
+    margin: 30px;
+    padding: 40px;
+    border: 5px ridge;
+    /*ESTO LO AGREGO AL FINAL Explicando que para que todas tengan la misma medida, le aplico el box.sizing que toma desde el borde hacia adentro sumando los 200x150. El margen lo deja afuera pq no pertenece a la cajita.
+    box-sizing: border-box;*/
+}
+
+/*Como hago para que todas las cajas midan igual?
+aplico box-sizing: border-box al selector universal.
+Todos los agregados los incluye en vez de ponerlos por fuera.*/
+
+

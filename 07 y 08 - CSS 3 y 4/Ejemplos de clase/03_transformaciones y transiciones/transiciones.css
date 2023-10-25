@@ -1,0 +1,33 @@
+/*------------- TRANSICIONES -------------*/
+.barra1 {
+    width: 100px;
+    height: 100px;
+    background: rgb(43, 43, 125);
+    transition: width 2s;
+  }
+
+.barra1:hover {
+    width: 300px;
+}
+
+.barra2 {
+    width: 100px;
+    height: 100px;
+    background: rgb(65, 65, 189);
+    transition: width 2s;
+  }
+
+.barra2:hover {
+    width: 300px;
+}
+
+.barra3 {
+    width: 100px;
+    height: 100px;
+    background: rgb(89, 89, 233);
+    transition: width 2s;
+  }
+
+.barra3:hover {
+    width: 300px;
+}

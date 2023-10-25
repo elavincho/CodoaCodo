@@ -1,0 +1,50 @@
+.barra1 {
+    width: 200px;
+    height: 100px;
+    background-color: red;
+    animation-name: cambiarColor1;
+    animation-duration: 4s;
+    animation-delay: 4s;
+    animation: cambiarColor1 2s 1s; /*forma abreviada de escribirlo*/
+}
+
+@keyframes cambiarColor1 {
+    from {background-color: blue;}
+    to {background-color: yellow;}
+}
+
+
+.barra2{
+    width: 200px;
+    height: 100px;
+    background-color: red;
+    animation-name: cambiarColor2;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes cambiarColor2 {
+    0% {background: black; width: 200px;}         /* Primer fotograma */
+    50% {background: grey; width: 400px;}     /* Segundo fotograma */
+    100% {background: mediumturquoise; width: 600px;}     /* Último fotograma */    
+}
+
+
+.barra3{
+    width: 200px;
+    height: 100px;
+    background-color: mediumorchid;
+    animation-name: cambiarColor3; /*cambiar a cambiarColor2*/
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+@keyframes cambiarColor3 {
+    0% {background: mediumorchid; width: 200px;}         /* Primer fotograma */
+    25% {background: mediumseagreen; width: 400px;}     /* Segundo fotograma */
+    50% {background: mediumslateblue; width: 600px;}     /* Tercer fotograma */    
+    75% {background: mediumturquoise; width: 400px;}     /* Cuarto fotograma */
+    0% {background: mediumorchid; width: 200px;}         /* Último fotograma */
+}
