@@ -1,0 +1,72 @@
+.padre {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 10px;
+}
+
+.header {
+    background: lightblue;
+}
+
+.articulo {
+    background: lightseagreen
+}
+
+.izquierda {
+    background: lightsalmon
+}
+
+.derecha {
+    background: lightslategray
+}
+
+.footer {
+    background: lightgrey
+}
+
+.header,
+.articulo,
+.izquierda,
+.derecha,
+.footer {
+    flex-grow: 1;
+    /*Especifica el factor de crecimiento de un elemento flexible, en este caso indica que su factor de crecimiento es 1 o sea que todos van a ocupar la misma cantidad de espacio*/
+    /*Le asignamos un 1 para que abarque el 100% de la pantalla*/
+    flex-basis: 100%;
+    /*Tamaño inicial que va a tener nuestro contenedor hijo, le damos el 100% para que en celular abarque el 100% */
+    padding: 10px;
+}
+
+/*Cuando tenga 600 px o más...*/
+@media all and (min-width: 600px) {
+    .aside {
+        flex: 1 1 auto;
+        /*los elementos izquierda y derecha se posicionan uno al lado del otro ocupando un ancho automático*/
+    }
+}
+
+/*Cuando tenga 800 px o más...*/
+@media all and (min-width: 800px) {
+    .articulo {
+        flex: 2 0;
+        /* articulo es 2 veces cada cuadrado izquierda o derecha */
+    }
+
+    .izquierda {
+        order: 1;
+    }
+
+    .articulo {
+        order: 2;
+    }
+
+    .derecha {
+        order: 3;
+    }
+
+    .footer {
+        order: 4;
+    }
+}

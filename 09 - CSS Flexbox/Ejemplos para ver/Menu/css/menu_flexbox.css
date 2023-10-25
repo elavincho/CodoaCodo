@@ -1,0 +1,67 @@
+body{
+	font-family: Arial ; 
+}
+
+.centrado{
+	margin:0 auto; 
+	padding: 0 1em;
+	background-color: aquamarine;
+}
+
+
+/* Esto hace que el menu tenga un tamaño fijo */
+@media screen and (min-width: 52em){ 
+	.centrado{			
+		max-width: 52em;
+	}
+}
+
+.menu-section{
+	padding-bottom: 2em;
+	margin-bottom: 2em;
+	border-bottom: 1px solid hsl(0, 0%);
+}
+
+.menu ul{
+	list-style-type: none; 
+	padding: 0;
+	margin:0;
+	background: hsl(0, 0%, 15%);
+}
+
+.menu li a {
+	display: block;
+	text-decoration: none;
+	color: white;
+	padding: .6em 1em; 
+}
+
+.menu li a:hover {
+	background: hsl(0, 0%, 25%);
+}
+ 
+
+ /*De aca para abajo Flexbox parte dos de la clase*/
+ .menu-simple ul{
+ 	display: flex;  /*este display nos premite trabajar con cajas flexibles*/
+ 			/*vemos como se ve igual que si hubieramos puesto display inline*/
+ 		/*la diferencia son las propiedades que les podemos agregar*/
+ 	flex-wrap: wrap;/* o bien nowrap
+	 le decimos que si no hay suficiente espacio se arme una linea abajo
+ 	        tambien...es lo que seria responsive
+ 	        con esto ocupa siempre el ancho de la pantalla
+ 	        genera una segunda linea de botones abajo o tercera*/
+ 	justify-content:space-between;/*distribuye para adentro , no alrededor , pero sigue habiendo espacio entre botones*/
+ 	/*el justifi content alinea por defecto con Flex-start , o sea , los alinea de izquiera a derecha*/
+ 	/*si hubiera puesto un float a la derecha los botones quedan a reves...inicio queda contra la derecha*/
+    /* flex-end;/*tira los botones a la derecha sin modificar orden*/ 	
+ 	/*center;/*Lo centra pero deja espacio sobrante*/
+ 	/*space-around;/*agrega un espacio para afuera pero deja margenes*/	
+ }					
+
+/*Como hago para que no me quede espacio entre botones?*/
+ .menu-simple li{
+ 	flex:1 0 auto;/*si hay espacio disponible crece en 1 , si no , se queda en cero  , y si es menor es auto*/
+ 	text-align: center;/*alineo las palabras de los botones*/
+
+ }

@@ -1,0 +1,115 @@
+*{
+    margin:10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.padre{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    /*flex-flow: column nowrap;*/
+}
+    .header {
+        background: #000;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        /*flex-flow: column nowrap;*/
+    } 
+        .menu{
+            background: darkblue;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            /*flex-flow: column nowrap;*/
+            height: 100px;
+            align-items: center;
+        }
+            .logo{
+                background: coral;
+                flex: 1 1 auto;
+                height: 30px;
+            }
+            .nav{
+                background: coral;
+                flex: 5 1 auto;
+                height: 30px;
+
+            }
+            .social{
+                background: coral;
+                flex: 1 1 auto;
+                height: 30px;
+            }
+        .texto-principal{
+            background: orange;
+        }
+            h1{
+                background:skyblue;
+            }
+    .section{
+        background: #000;
+        display: flex;
+    }
+        .articulos{
+            background:purple;
+            flex: 2 1 auto;
+            display: flex;
+            flex-flow: row wrap;
+        }
+            .article{
+                background:darkblue;
+                flex: 1 1 40%;
+            }
+            .navegacion{
+                background: lightblue;
+                flex: 1 1 100%;
+            }
+        .aside{
+            background: pink;
+            flex: 1 1 auto;
+        }
+            .publicidad{
+                background:lightseagreen;
+            }
+    .footer {
+        background: #000;
+        display: flex;
+        justify-content: center;
+    }
+        .pie{
+            background:limegreen;
+            width: 300px;
+        }
+
+/*De 601 a 800px*/
+@media all and (max-width: 800px){
+/*El aside debe pasar hacia abajo*/
+    .section{
+        flex-direction: column;
+    }
+/*Los elementos del menu deben mostrarse uno debajo del otro*/
+    .menu{
+        flex-direction: column;
+        height: auto;
+    }
+/*Los elementos del aside se deben mostrar uno al lado del otro*/
+    .aside{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/*De 401 a 600px*/
+@media all and (max-width: 600px){
+    .articulos{
+        flex-direction: column;
+    }
+}
+
+/*De 0 a 400px*/
+@media all and (max-width: 400px){
+    .aside{
+        flex-direction: column;
+    }
+}

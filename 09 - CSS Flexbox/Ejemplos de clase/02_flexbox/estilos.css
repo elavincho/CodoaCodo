@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*Para que todas las cajas tengan el mismo tamaño, incorpora los bordes dentro del tamaño de la caja*/
+}
+
+.padre{
+    width: 80%;
+    height: 80%;
+    margin: 50px auto; /*1er valor es de arriba y abajo, AUTO es para los laterales*/
+    background: lightblue;
+    border: 2px solid blue;
+
+    /*Esto lo agrego luego de crear a la clase hijo*/
+    /*Convierto al padre en flexible, entonces los hijos heredan*/
+    display: flex; /*Defino el eje central que va a manejar mis elementos*/
+    
+    flex-direction: row; /*Dirección en filas*/
+    /* flex-direction: row-reverse; */ /*Intercambia los elementos*/
+    /* flex-direction: column; */ /*Ordena en columnas*/
+    /* flex-direction: column-reverse; */ /*Intercambia los elementos*/
+    
+    flex-wrap: wrap; /*Para que la cantidad de cajas respete el ancho del elemento padre respetando el tamaño de los elementos. No es necesario agregar los breakpoints ya que FLEX es automático.*/
+
+    /*Para justificar el contenido de los elementos, para ajustar el espaciado.*/
+    /* justify-content: flex-start; */
+    /* justify-content: center; */
+    /* justify-content: space-between; */
+    /* justify-content: space-around; */
+    justify-content: space-evenly; 
+
+
+    /*Para Alinear los ítems*/
+    /* align-items: flex-start; */
+    /* align-items: flex-end; */
+    align-items: center;
+    align-content: stretch;
+}
+
+.hijo{
+    background: navy;
+    border: 2px dashed white;
+    width: 200px;
+    height: 100px;
+    color: white;
+    margin: 30px;
+    padding: 20px;
+    font-size: 40px;
+    text-align: center;
+}
+
+
+/*Lo agrego a lo último para individualizar propiedades de cada caja*/
+.chico{
+    font-size: 10px;
+}
+
+.grande{
+    font-size: 60px;
+}
