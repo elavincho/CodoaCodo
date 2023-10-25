@@ -1,0 +1,37 @@
+body {font-family: Verdana;}
+body {font-family: Verdana;}
+.codigo {
+    font-family: 'Courier New';
+    background-color: lightblue;
+    font-weight: bold;
+}
+
+/*Encabezado*/
+.item1 {grid-area: header;}
+/*Menú*/
+.item2 {grid-area: menu;}
+/*Principal*/
+.item3 {grid-area: main;}
+/*Aside*/
+.item4 {grid-area: aside;}
+/*Pie*/
+.item5 {grid-area: footer;}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        /*6 columnas y 3 filas*/
+        'header header header header header header'
+        'menu main main main main aside'
+        'menu footer footer footer footer footer';
+    grid-gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+}
+
+.grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}

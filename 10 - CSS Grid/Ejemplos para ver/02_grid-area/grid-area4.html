@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="grid-area4.css">
+    <title>Grid Area IV</title>
+</head>
+
+<body>
+    <h1>Propiedad grid-area</h1>
+
+    <p>Puede usar la propiedad <span class="codigo">grid-area</span> para nombrar elementos de cuadrícula.</p>
+    <p>Puede hacer referencia al nombre cuando configure el diseño de la cuadrícula, utilizando la propiedad <span class="codigo">grid-template-areas</span> en el contenedor de la cuadrícula.</p>
+    <p>En este caso, cada clase tiene un área asignada. Las áreas están distribuidas en <b>3 filas con 6 columnas</b>:</p>
+    <ul>
+        <li>La primera fila queda reservada para el encabezado (header).</li>
+        <li>La segunda fila se reparte entre el menú y el aside, a ambos lados, y el contenido principal (main) ocupando 4 columnas.</li>
+        <li>La tercera fila se reparte entre el menú y el pie (footer).</li>
+    </ul>
+    <div class="grid-container">
+        <div class="item1">Header</div>
+        <div class="item2">Menú</div>
+        <div class="item3">Main</div>
+        <div class="item4">Aside</div>
+        <div class="item5">Footer</div>
+    </div>
+</body>
+
+</html>
