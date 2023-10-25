@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <!--eventos en el DOM-->
+    <!--Como hago para que tocando un boton pase algo
+    en este caso, se escriba en la pagina.-->
+    <div>   
+        <button id="elBoton">Boton</button>
+    </div>
+
+
+
+
+    <script>
+        let mensaje = function(){
+            console.log("Hice click")
+        }
+
+        let mensaje2 = function(){
+            console.log("estoy arriba del boton")
+        }
+        let mensaje3=function(){
+            console.log("sali del boton")
+        }
+
+
+
+        let elBoton = document.querySelector("#elBoton")
+        elBoton.addEventListener("click",mensaje)
+        elBoton.addEventListener("mouseover",mensaje2)
+        elBoton.addEventListener("mouseout",mensaje3)
+
+
+
+        
+
+    </script>
+</body>
+</html>

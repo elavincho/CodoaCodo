@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body> 
+    <!--Menu desplegable con eventos--> 
+    <a class="menu-btn" href="#">Menu</a>
+
+    <!--otra forma es esta...  se muestra AL FINAL de la clase
+    <a onclick="menuToggle()" class="menu-btn" href="#">Menu</a>-->
+
+    <div class="menu">
+        <ul>
+            <li><a href="#">Aca va un link</a></li>
+            <li><a href="#">Aca va un link</a></li>
+            <li><a href="#">Aca va un link</a></li>
+            <li><a href="#">Aca va un link</a></li>
+            <li><a href="#">Aca va un link</a></li>
+        </ul>
+     </div>
+    
+    <script>
+        //Llamo a los elementos para poder referenciarlos
+        //hago la llamada al boton.
+        let menuBtn = document.querySelector(".menu-btn");
+        //referencio el menu
+        let menu = document.querySelector(".menu");
+
+        //creo una bandera para saber si el menu esta abierto o no
+        let menuStatus = false;
+
+        //Empezamos con el menu escondido.
+        menu.style.marginLeft = "-300px";
+
+        function menuToggle(){
+            if(menuStatus==false){
+                menu.style.marginLeft ="0px";
+                menuStatus=true;
+            }else{
+                menu.style.marginLeft = "-300px";
+                menuStatus = false;
+            }
+        }
+        
+        
+        menuBtn.onclick = menuToggle;
+
+    </script>
+    
+</body>
+</html>

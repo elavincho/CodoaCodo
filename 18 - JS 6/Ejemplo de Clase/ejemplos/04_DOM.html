@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <!--Aca vamos a usar QuerySelectorAll
+    querySelectorAll trae todas las referencias 
+    ..no solo la primera-->
+
+        <div class="caja">Caja 1</div>
+        <div class="caja">Caja 2</div>
+        <div class="caja">Caja 3</div>
+    
+
+
+    <script>
+        let cajas = document.querySelectorAll(".caja")
+        console.log(cajas)
+
+        for(let i=0; i<cajas.length; i++){
+            cajas[i].style.color = "red"
+        }
+    </script>
+
+
+</body>
+</html>

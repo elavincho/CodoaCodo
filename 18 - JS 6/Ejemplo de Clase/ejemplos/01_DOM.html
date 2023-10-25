@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+
+</head>
+<body>
+       
+    <h1>Dom Basico</h1>
+    <p id="parrafo1">1--1111 ipsumlit. Veritatis, eligendi?</p>
+    <p id="parrafo2">2--22222 elit. Animi, non blanditiis!</p>
+    <p id="parrafo3">3--33333 ipsum dolor sit amet consectetur  elit.</p>
+
+    
+    <script>
+        //Buscar elemento por su nombre
+        let parrafos = document.getElementsByTagName("p")
+        console.log(parrafos)
+        parrafos[1].innerHTML = "Contenido nuevo"
+
+        //Buscar elementos por ID
+        let parrafoNuevo = document.getElementById("parrafo3")
+        parrafoNuevo.innerHTML = "Parrafo tres"
+
+    </script>
+
+
+
+
+
+</body>
+</html>

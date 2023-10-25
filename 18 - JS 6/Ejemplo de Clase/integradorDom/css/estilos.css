@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    text-align: center;
+}
+button{
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+}
+header {
+    background-color: blanchedalmond;
+}
+
+footer {
+    background-color: blanchedalmond;
+    text-align: center;
+}
+
+#logo {
+    width: 100vw;
+}
+
+.aheader {
+    color: blanchedalmond;
+    font-size: 23px;
+    text-decoration: none;
+    background-color: dimgray;
+    padding: 8px;
+    margin: 5px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.aheader:hover {
+    outline: 2px solid black;
+}
+
+.aheader:visited {
+    color: rgb(242, 196, 128);
+}
+
+.aheader:active {
+    background-color: rgb(243, 240, 235);
+    color: rgb(8, 8, 8);
+}
+
+footer a {
+    text-decoration: none;
+    padding: 10px;
+}
+
+footer nav {
+    /*display: inline;*/
+    width: 220px;
+    margin: 0 auto;
+}
+
+/*-------------------------- Pagina index   --------------------*/
+.tarjeta {
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #727272;
+    margin: 15px;
+}
+
+.tarjeta img {
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.textocard {
+    padding: 10px;
+}
+
+.tarjeta a {
+    color: blanchedalmond;
+    font-size: 23px;
+    text-decoration: none;
+    background-color: dimgray;
+    padding: 5px;
+    margin: px;
+    border-radius: 10px;
+    display: inline-block;
+
+}
+
+.contenedor p {
+    padding: 10px 0px;
+}
+
+.contenedor {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+
+.logo {
+    grid-area: logo;
+
+    /*background-color: #000;*/
+    color: white;
+    height: 60px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.footer {
+    height: 60px;
+    grid-area: footer;
+    background-color: #000;
+    color: white;
+}

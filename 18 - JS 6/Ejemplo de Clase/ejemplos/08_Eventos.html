@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <!--eventos en el DOM-->
+    <!--Como hago con eventos para ingresar texto de pantalla y 
+    calcular la cantidad de letras que yo le diga-->
+    <div> 
+        Ingrese texto: <input id="input" type="text"  >
+        <br>
+        Ingrese letra a buscar: <input id="letra" type="text"  maxlength="1" >
+        <br>
+        <button id="elBoton">Calcular Cantidad letras</button>
+    </div>
+      
+    <script>
+      
+      let mensaje = function(){
+
+        let texto = document.querySelector("#input").value;
+        let letra = document.querySelector("#letra").value;
+        console.log(texto);
+        console.log(letra);
+        let contador = 0;
+        for(let i=0;i<texto.length;i++){
+            //la del calamar
+            if(texto.substring(i,i+1)==letra){
+                contador++;
+            }
+        }
+        document.write("Encontramos " + contador + " letras " + letra);
+      }
+
+      let boton = document.querySelector("#elBoton");
+      boton.addEventListener("click", mensaje);
+      
+
+       
+    </script>
+
+</body>
+</html>

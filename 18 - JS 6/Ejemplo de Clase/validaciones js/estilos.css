@@ -1,0 +1,45 @@
+* {
+    font-family:Verdana;
+    margin: 0px;
+    padding: 0px;
+}
+
+h2{
+    color:blue;
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
+}
+
+.formulario{
+    width: 400px;
+    padding: 20px;
+    border: 1px solid blue;
+    background-color: lightblue;
+    margin: 20px auto;
+}
+.contenedor{
+    margin: 20px 0px;
+    display: flex;
+    justify-content: center;
+}
+.centrado{text-align:center;}
+.link{
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border: 3px solid lightblue;
+    background-color: blue;
+    border-radius: 3px;
+    margin: 0px 20px;
+}
+.boton, #b1 {
+    color: blue;
+    border-radius: 3px;
+    border: 1px solid blue;
+    padding: 5px;
+}
+
+.boton{
+    background-color: lightblue;
+}
