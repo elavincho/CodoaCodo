@@ -1,0 +1,27 @@
+*{font-family: Arial;}
+.session{
+    color: darkblue;
+    background: lightblue;
+}
+.local{
+    color: green;
+    background: lightgreen;
+}
+.boton_ls{
+    font-weight: bold;
+    color: green;
+    background: lightgreen;
+    border: 2px solid;
+    padding: 5px;
+    margin-left: 5px;
+    box-shadow: 2px 2px black;
+}
+.boton_ss{
+    font-weight: bold;
+    color: blue;
+    background: lightblue;
+    border: 2px solid;
+    padding: 5px;
+    margin-left: 5px;
+    box-shadow: 2px 2px black;
+}

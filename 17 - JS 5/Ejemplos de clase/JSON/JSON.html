@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de JSON</title>
+    <script>
+        //Declaramos el objeto JSON
+        var objJSON = {
+            "empleados": [
+                { "nombre": "Juan", "apellido": "Pérez"},
+                { "nombre": "Ana", "apellido": "López" },
+                { "nombre": "Pedro", "apellido": "Fernández" }
+            ],
+            "jefe": "Luis Rodriguez",
+            "piso": 3,
+        }
+        
+        //Mostramos los datos
+        document.write("Jefe: ",objJSON.jefe)
+        document.write(" - Piso: ",objJSON.piso, "<br><br>")
+        for (x in objJSON.empleados){
+            document.write(objJSON.empleados[x].nombre + " " +objJSON.empleados[x].apellido,"<br>")
+        }
+    </script>
+    <style>*{font-family: Arial;}</style>
+</head>
+<body>
+    
+
+</body>
+</html>

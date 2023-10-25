@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON y HTML</title>
+</head>
+<body>
+    <script>
+        var persona= '{"nombre": "Juan", "apellido": "Pérez", "edad": 40, "hijos": ["Pedro", "Luis", "Ana", "Luisa"]}' //formato JSON
+        var personaJSON= JSON.parse(persona) //Convertimos JSON en JS
+        console.log(persona)
+        console.log(personaJSON)
+        
+        document.write(personaJSON.apellido.toUpperCase() +", "+personaJSON.nombre+" ("+personaJSON.edad+")")
+        document.write("<br>")
+        for (hijo in personaJSON.hijos) {
+            document.write("<li>")
+            document.write(personaJSON.hijos[hijo])
+        }
+    </script>
+</body>
+</html>

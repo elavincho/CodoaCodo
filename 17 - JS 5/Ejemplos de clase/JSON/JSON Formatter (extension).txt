@@ -1,0 +1,2 @@
+JSON Formatter es una extension de chrome para formatear y poder ver mejor JSON
+https://chrome.google.com/webstore/detail/json-formatter/mhimpmpmffogbmmkmajibklelopddmjf?hl=es

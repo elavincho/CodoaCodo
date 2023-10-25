@@ -1,0 +1,7 @@
+{
+  "nombre": "Carlos",
+  "apellido": "Rivarola",
+  "segundoNombre": null,
+  "edad": 30,
+  "hijos": ["Ana", "Luisa", "Marcelo"]
+}

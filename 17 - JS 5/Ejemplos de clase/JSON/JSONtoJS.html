@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON to JS</title>
+</head>
+
+<body>
+    <!-- Convirtiendo de JSON a JavaScript: -->
+    <script>
+        var ej1 = JSON.parse('{}')              // {}
+        var ej2 = JSON.parse('true')            // true
+        var ej3 = JSON.parse('"foo"')           // "foo"
+        var ej4 = JSON.parse('[1, 5, "false"]') // [1, 5, "false"]
+        var ej5 = JSON.parse('null')            // null
+
+        console.log(ej1)
+        console.log(ej2)
+        console.log(ej3)
+        console.log(ej4)
+        console.log(ej5)
+
+        //Objeto JS
+        var objetoJS = {
+            name: "John",
+            age: 31,
+            city: "New York" }
+        console.log("Objeto JS:", objetoJS)
+
+        //Convertimos objetoJS en JSON
+        var objetoJSON = JSON.stringify(objetoJS)
+        console.log("Objeto JSON:",objetoJSON)
+
+        //Convertimos objetoJSON en JS
+        var objetoJS2=JSON.parse(objetoJSON)
+        console.log("Objeto JS_2:", objetoJS2)
+
+</script>
+</body>
+
+</html>
