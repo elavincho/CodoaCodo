@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <!-- Agregar el Favicon -->
+    <link rel="icon" href="img/favicon.ico">
+</head>
+
+<body>
+
+    <header>
+        <!-- Imagen -->
+        <img src="img/slide.jfif" alt="vista_aerea_buenos_aires" width="100%">
+        <nav>
+            <a href="index.html">Inicio |</a>
+            <a href="#Multimedia">Multimedia |</a>
+            <a href="#Historia">Historia |</a>
+            <a href="servicios.html">Servicios |</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Buenos Aires</h1>
+        <h2>Formulario de Contacto</h2>
+        <form action="">
+            <!-- fieldset le da un recuadro a toda la seccion-->
+            <fieldset>
+                <legend>Datos Personales</legend>
+
+                <!-- Nombre -->
+                <label for="nombre">Nombre: </label>
+                <!-- placeholder: indica lo que se tiene que hacer -->
+                <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre...">
+
+                <!-- Apellido -->
+                <!-- maxlength: indica la cantidad maxima de caracteres -->
+                <!-- required: indica un campo obligatorio -->
+                <label for="apellido">Apellido: </label>
+                <input type="text" name="apellido" id="apellido" size="10" maxlength="5" required>
+
+                <!-- DNI -->
+                <label for="dni">DNI: </label>
+                <input type="number">
+
+                <!-- Nro de trámite -->
+                <label for="nro_tramite">Número de trámite: </label>
+                <input type="password">
+
+                <!-- Hijos -->
+                <label for="hijos">Nro de Hijos (0 a 10): </label>
+                <!-- min-max: indica en numero minimo y maximo -->
+                <input type="number" min="0" max="10">
+
+                <!-- Mail -->
+                <!-- email:Chequea que tenga el @ y el .com -->
+                <label for="mail">Mail: </label>
+                <input type="email">
+
+                <!-- Fecha de Nacimiento -->
+                <label for="fecnac">Fecha de Nacimiento: </label>
+                <input type="date" min="2023-01-01" max="2023-12-31">
+
+                <!-- Adjuntar imagen -->
+                <label for="foto">Adjuntar archivo: </label>
+                <input type="file">
+            </fieldset>
+
+            <br><br>
+
+            <fieldset>
+                <legend>Datos para la Inscripción: </legend>
+                <!-- Turno - Selección -->
+                <label for="turno" required>Seleccionar turno: </label>
+                <select name="turno" id="turno">
+                    <option value="vacio"></option>
+                    <option value="1">Mañana</option>
+                    <option value="2">Tarde</option>
+                    <option value="3">Vespertino</option>
+                    <option value="4">Noche</option>
+                </select>
+                <br>
+
+                <!-- Conocimientos Previos - Chekbox (selección múltiple) -->
+                <label for="conocimientos">Conocimientos Previos: </label>
+                <input type="checkbox">HTML
+                <input type="checkbox">CSS
+                <input type="checkbox">JS
+                <br>
+
+                <!-- Interés - Radio (única selección) -->
+                <!-- Para que tenga una sola seleccion hay que identificarlos tiene que tener un id -->
+                <label for="interes">Tengo interés en...</label>
+                <input type="radio" name="interes" id="A">FullStack Python
+                <input type="radio" name="interes" id="B">FullStack JAVA
+                <input type="radio" name="interes" id="C">FullStack PHP
+                <input type="radio" name="interes" id="D">Diseño UX/UI
+            </fieldset>
+
+            <br><br>
+            <!-- Comentarios -->
+            <label for="comentarios">Deje aquí sus comentarios: </label>
+            <br>
+            <textarea name="comentarios" id="comentarios" cols="55" rows="10"></textarea>
+
+            <br><br>
+
+            <!-- Botones -->
+            <input type="submit" value="Enviar Formulario">
+            <input type="reset" value="Borrar">
+
+
+        </form>
+
+        <br><br><br><br>
+
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d210177.06960026242!2d-58.66172176718747!3d-34.6037389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses!2sar!4v1692050566059!5m2!1ses!2sar"
+            width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </main>
+
+    <footer>
+        <h4>2023 Codo a Codo. Todos los derechos reservados. 😎</h4>
+    </footer>
+
+</body>
+
+</html>
