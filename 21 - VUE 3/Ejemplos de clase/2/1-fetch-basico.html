@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch-básico</title>
+</head>
+
+<body>
+    <script>
+        let url = 'https://jsonplaceholder.typicode.com/albums' //variable donde hacemos referencia al origen de los datos
+        fetch(url) //solicitud a la url
+            .then(response => response.json()) //se resuelve la promesa, al obtener la respuesta la pasa a un determinado formato (json). Extraemos el contenido JSON desde la respuesta.
+            .then(data => console.log(data)) //mostramos el objeto data por consola
+            .catch(error => console.log("Ocurrió un error", error)) // si hay un error será atrapado por catch
+    </script>
+</body>
+
+</html>

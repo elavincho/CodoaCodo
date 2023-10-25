@@ -1,0 +1,30 @@
+CLIMA:
+https://open-meteo.com/en/docs#api_form
+
+https://api.open-meteo.com/v1/forecast?latitude=-34.59&longitude=-58.38&current_weather=true&hourly=temperature_2m,relativehumidity_2m,windspeed_10m
+
+Web de APIs:
+https://apilist.fun/ 
+https://apis.guru/ 
+https://api-ninjas.com/api
+
+SATÉLITE:
+https://wheretheiss.at/w/developer
+
+TRAGOS:
+https://thecocktaildb.com/api.php
+
+LIBROS:
+https://openlibrary.org/dev/docs/restful_api
+
+CORONAVIRUS:
+https://pipedream.com/@pravin/http-api-for-latest-wuhan-coronavirus-data-2019-ncov-p_G6CLVM/readme
+
+CAT FACTS:
+https://catfact.ninja/fact
+
+SERIES:
+https://www.tvmaze.com/api
+
+DOLAR:
+https://www.dolarsi.com/api/api.php?type=valoresprincipales

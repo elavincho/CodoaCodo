@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+   
+    <script src="https://kit.fontawesome.com/e15e8c34af.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style\style.css">
+    <title>La cocina de Pepe</title>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>La cocina de Pepe</h1>
+            <nav>
+                <a class="menu" @click="view = 'home' ">Home</a>
+                <a class="menu" @click="view = 'about'">Acerca de</a>
+                <a class="menu" @click="view = 'contact'">Contacto</a>
+                <a class="menu" @click="view = 'location'">Sucursal</a>
+                <a class="menu" @click="view = 'registration'">Registrarse</a>
+                <a class="menu" @click="view = 'delivery'  ">Delivery</a>
+            </nav>
+        </header>
+        <main>
+            <div class="container">
+                <component :is="view"></component>
+            </div>
+        </main>
+        <div class="footer">
+            <a class="redsoc" href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter"
+                    aria-hidden="true"></i></a>
+            <a class="redsoc" href="https://www.facebook.com/marcela.cerda.9" target="_blank"><i class="fa fa-facebook"
+                    aria-hidden="true"></i></a>
+            <a class="redsoc" href="https://www.pinterest" target="_blank"><i class="fa fa-pinterest"
+                    aria-hidden="true"></i></a>
+            <a class="redsoc" href="https://www.instagram.com/marcela.ines.cerda/" target="_blank"><i
+                    class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a class="redsoc" href="https://www.linkedin.com/in/marcela-cerd%C3%A1-678b05196/" target="_blank"><i
+                    class="fa fa-linkedin" aria-hidden="true"></i></a>
+            <p>Derechos reservados @2020 </p>
+        </div>
+    </div>
+    <script src="js/vue.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

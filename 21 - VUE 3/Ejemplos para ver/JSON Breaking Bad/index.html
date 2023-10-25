@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <h1>The Breaking Bad API</h1>
+    <div id="app" class="d-flex flex-wrap justify-content-center  "     >
+        <div class="card m-3 " style="width:200px"  v-for="personaje in info "       >
+            <img class="card-img-top" :src="personaje.img"  :alt="info.name" style="width:100%; height:250px ; object-fit: cover ; object-position: top; ">
+            <div class="card-body">
+              <h4 class="card-title">{{personaje.name}}</h4>
+              
+              <!--<p class="card-text">Id: {{personaje.char_id}}</p>-->
+              <p class="card-text">F.Nac {{personaje.birthday}}</p>
+              <p class="card-text">Ocupacion<li v-for="ocupacion in personaje.occupation">{{ocupacion}}</li> </p>
+              <p class="card-text">Apodo: {{personaje.nickname}}</p>
+              <p class="card-text">Actor: {{personaje.portrayed}}</p>
+            </div>
+          </div>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

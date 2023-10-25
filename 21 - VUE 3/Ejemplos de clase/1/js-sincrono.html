@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS sincrono</title>
+</head>
+
+<body>
+
+    <script>
+        /*Cada operación se hace de una vez, bloqueando el flujo de ejecución, el hilo es bloqueado mientras espera la respuesta, cuando esta se procesa pasa a la siguiente operación y así sucesivamente al terminar todas las operaciones.*/
+        
+        function dos() {
+            console.log("Dos")
+        }
+        
+        function uno() {
+            console.log("Uno")
+            console.log(variable)
+            dos()
+            console.log("Tres")
+        }
+        
+        //Programa principal
+        console.log("---Inicio---")
+        uno()
+        console.log("---Fin---")
+
+    </script>
+
+</body>
+
+</html>

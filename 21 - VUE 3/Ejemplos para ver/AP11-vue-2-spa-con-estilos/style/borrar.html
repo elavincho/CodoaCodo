@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="menu">   </div>
+
+<script>
+    var data={
+    "titulo" : "La Cocina de Doña Inés",
+    "sandwich":[
+        {"nombre":"SÁNDWICH ITALIANO", 
+        "ingredientes":"Jamón crudo, queso brie, rúcula, tomates confitados.", 
+        "precio": "220",
+        "imagen":"https://naturally-fresh.web.app/images/sandwichs/1.jpg"
+        } ,
+
+        {"nombre":"SÁNDWICH VEGETARIANO", "ingredientes":"Queso brie, palta, rúcula, tomates confitados.", "precio": "190","imagen":"https://naturally-fresh.web.app/images/sandwichs/2.jpg"},
+        {"nombre":"CIABATTA DE POLLO", "ingredientes":"Pollo, apio, queso crema, lechuga, tomate, panceta crocante.", "precio":"200","imagen":"https://naturally-fresh.web.app/images/sandwichs/3.jpg" },
+        {"nombre":"SÁNDWICH DE SALMÓN", "ingredientes":"Salmón ahumado, queso crema, palta, cebolla morada y rúcula.", "precio":"180","imagen":"https://naturally-fresh.web.app/images/sandwichs/4.jpg" },        
+        {"nombre":"CIABATTA DE cerdo", "ingredientes":"Pollo, apio, queso crema, lechuga, tomate, panceta crocante.", "precio":"200","imagen":"https://naturally-fresh.web.app/images/sandwichs/3.jpg" },
+        {"nombre":"SÁNDWICH DE trucha", "ingredientes":"Salmón ahumado, queso crema, palta, cebolla morada y rúcula.", "precio":"180","imagen":"https://naturally-fresh.web.app/images/sandwichs/4.jpg" },        
+    
+    ],
+    "wraps":[
+        {"nombre":"BURRITO DE POLLO AL CURRY", "ingredientes":"Tortilla de trigo, guacamole, arroz yamaní, pollo al curry, queso gratinado.", "precio":"170","imagen":"https://naturally-fresh.web.app/images/wraps/1.jpg"},
+        {"nombre":"WRAP DE POLLO", "ingredientes":"Tortilla de trigo, pollo, queso danbo, palta, tomate, rúcula, panceta crocante, aderezo de mostaza y miel.", "precio":"195","imagen":"https://naturally-fresh.web.app/images/wraps/2.jpg"},
+        {"nombre":"WRAP VEGETARIANO", "ingredientes":"Tortilla de trigo, espinaca, rúcula, zanahoria, repollo, palta,huevo, champiñones, queso danbo, aderezo caesar.", "precio": "160","imagen":"https://naturally-fresh.web.app/images/wraps/3.jpg"},
+        {"nombre":"WRAP CAESAR", "ingredientes":"Tortilla de trigo, pollo, lechuga francesa y morada,croutones, queso parmesano.", "precio":"185" ,"imagen":"https://naturally-fresh.web.app/images/wraps/4.jpg"},
+    ],
+    "locations":[
+        {"barrio":"Cañitas",
+        "direccion":"Jorge Newbery 2004",
+        "horario":"Lunes a viernes de 9.30 a 23hs - Sábado y domingo de 17 a 23.",
+        "imagen":"images/locales/canitas.jpg",
+        link:"https://www.google.com.ar/maps/place/Av.+Jorge+Newbery+2004,+C1426CXJ+CABA/@-34.5693289,-58.4387761,17z/data=!3m1!4b1!4m5!3m4!1s0x95bcb5bec4f7d70d:0x6a666ee9eb5ee8b8!8m2!3d-34.5693289!4d-58.4365821"
+    },
+        
+        
+        {"barrio":"Belgrano","direccion":"Libertador 7000","horario":"Lunes a viernes de 9 a 16.30hs.","imagen":"images/locales/belgrano.jpg",link:"https://www.google.com.ar/maps/place/Av.+Jorge+Newbery+2004,+C1426CXJ+CABA/@-34.5693289,-58.4387761,17z/data=!3m1!4b1!4m5!3m4!1s0x95bcb5bec4f7d70d:0x6a666ee9eb5ee8b8!8m2!3d-34.5693289!4d-58.4365821"},
+        {"barrio":"Retiro","direccion":"Marcelo T de Alvear 868","horario":"Lunes a viernes de 9 a 16hs.","imagen":"images/locales/retiro.jpg",link:"https://www.google.com.ar/maps/place/Av.+Jorge+Newbery+2004,+C1426CXJ+CABA/@-34.5693289,-58.4387761,17z/data=!3m1!4b1!4m5!3m4!1s0x95bcb5bec4f7d70d:0x6a666ee9eb5ee8b8!8m2!3d-34.5693289!4d-58.4365821"}
+       ],
+    "tartas y ensaladas": [
+        {"nombre":"ENSALADA PASO A PASO","precio":"270","imagen":"images/salads/1.jpg"},
+        {"nombre":"ENSALADA DEL CHEF","precio":"195","imagen":"images/salads/1.jpg"},
+        {"nombre":"ENSALADA CAESAR","precio":"195","imagen":"images/salads/1.jpg"},
+        {"nombre":"TARTA DEL DIA","precio":"140","imagen":"images/salads/1.jpg"},
+    ],
+    "Desayuno o merienda": [
+        {"nombre":"YOGOURT DAHI","precio":"90"},
+        {"nombre":"YOGOURT CON GRANOLA Y FRUTAS","precio":"125"},
+        {"nombre":"BARRAS DE FRUTOS SECOS Y CEREALES","precio":"75"},
+        {"nombre":"FRUTAS FRESCAS","precio":"85"}
+    ],
+    "bebidas": [
+        {"nombre":"AGUA MINERAL","precio":"70"},
+        {"nombre":"AGUA MINERAL CON GAS","precio":"70"},
+        {"nombre":"AGUAS SABORIZADAS","precio":"80"},
+        {"nombre":"GASEOSAS","precio":"90"},
+        {"nombre":"JUGO DE NARANJA EXPRIMIDO","precio":"90"},
+        {"nombre":"LIMONADA","precio":"90"},
+        {"nombre":"CAFÉ CHICO","precio":"90"},
+        {"nombre":"CAFÉ JARRITO","precio":"90"},
+        {"nombre":"CAFÉ DOBLE","precio":"100"}
+    ],
+    "Cosas dulces y ricas": [
+        {"nombre":"MOUSSE DE CHOCOLATE VASITO","precio":"80"},
+        {"nombre":"CHOCOTORTA VASITO","precio":"80"},
+        {"nombre":"LEMON PIE VASITO","precio":"80"},
+        {"nombre":"GELATINA","precio":"50"},
+        {"nombre":"BARRA DE FRUTOS SECOS Y CEREALES","precio":"80"},
+        {"nombre":"FRUTAS FRESCAS","precio":"80"}
+    ]
+    }
+    var cad=""
+    cad=cad+"<h3>Wrap</h3>"
+
+    cad=cad+`<table class="table table-bordered table-dark">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Ingredientes</th>
+                    <th>Precio</th>
+                    <th>Imagen</th>
+                </tr>`
+
+    for( var element of data.wraps){
+        cad=cad+`<tr>
+                    <td>${element.nombre}</td>
+                    <td>${element.ingredientes}</td>  
+                    <td>${element.precio}</td> 
+                    <td><img src="${element.imagen}"></td>
+                </tr>  `
+    }        
+    cad=cad+`</table>
+            <br>` 
+
+    console.log(cad)
+
+
+    document.getElementById("menu").innerHTML =cad;
+</script>    
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS asincrono</title>
+</head>
+
+<body>
+
+    <script>
+        /*Cada operación se ejecuta y devuelve inmediatamente el control al hilo, evitando el bloqueo, cuando cada operación termine se enviará una notificación de que ha terminado, es entonces cuando la respuesta se encolará para ser procesada.*/
+        
+        function dos() {
+            setTimeout(function () {
+                console.log("Dos")
+            }, 2000) //Cambiar a 2000
+        }
+        
+        function uno() {
+            setTimeout(function () {
+                console.log("Uno")
+            }, 1500)
+            dos()
+            console.log("Tres")
+        }
+        
+        //Programa principal
+        console.log("---Inicio---")
+        uno()
+        console.log("---Fin---")
+
+    </script>
+
+</body>
+
+</html>

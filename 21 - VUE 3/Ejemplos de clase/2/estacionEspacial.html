@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estación espacial</title>
+    <!-- https://wheretheiss.at/ -->
+    <!-- https://wheretheiss.at/w/developer -->
+    <!-- Ejemplo: https://api.wheretheiss.at/v1/satellites/25544 -->
+</head>
+<body>
+    <h1>Estación espacial</h1>
+    Nombre: <span id="name"></span> <br>
+    Latitud: <span id="latitude"></span> <br>
+    Longitud: <span id="longitude"></span> <br>
+
+    <script>
+        //Guardamos la url de la api que vamos a usar
+        const url_api = 'https://api.wheretheiss.at/v1/satellites/25544'
+        //Indicamos que la función va a ser asíncrona (lo usamos cuando trabajamos con apis externas)
+        async function obtenerPosicion(){
+            //Fetch va a buscar los datos a la api y devuelve promesas
+            //Con await decimos que espere porque puede tardar 
+            const response = await fetch(url_api)
+            console.log(response)   // Acá lo importante es que la promesa
+                                    // me devuelve en [[PromiseResult]]: Response
+                                    // que el status es 200, indica que trajo los datos
+                                    // podría traer errores de 400 para arriba: no se encuentra la página
+                                    // o 500 para arriba: errores de servidor
+            
+            //Debemos transformar esto en un objeto json para poder trabajarlo:
+            const data = await response.json()
+            console.log(data)
+
+            //Ahora podemos mostrar los datos:
+            const nombre = data.name
+            const latitud = data.latitude
+            const longitud = data.longitude
+            console.log(nombre)
+            console.log(latitud)
+            console.log(longitud)
+            document.getElementById("name").innerHTML = nombre
+            document.getElementById("latitude").innerHTML = latitud
+            document.getElementById("longitude").innerHTML = longitud
+        }
+
+        obtenerPosicion()
+        //Si vamos actualizando se van a ir viendo el cambio en los datos
+
+    </script>
+
+</body>
+</html>
