@@ -1,0 +1,42 @@
+body {
+    font-family: Verdana;
+}
+
+h1 {
+    border-top: 2px dotted;
+    border-bottom: 2px dotted;
+    background-color: lightgrey;
+}
+
+h2 {
+    border-top: 1px dotted;
+    border-bottom: 1px solid;
+    background-color: lightblue;
+}
+
+.subtitulo {
+    margin-left: 30px;
+    border-top: 1px dotted;
+    border-bottom: 1px solid;
+    background-color: rgb(219, 241, 248);
+}
+
+.fondo{
+    background-color: rgb(173, 216, 230);
+    width: 800px;
+    margin: 0 auto;
+    padding: 50px;
+    text-align: center;
+}
+.fondo-imagen{
+    background-image: url("img/fondo.jpg");
+    width: 800px;
+    margin: 0 auto;
+    padding: 50px;
+}
+.texto-imagen{
+    background-color: rgba(255,255,255,75%);
+    padding: 5px;
+    text-align: center;
+    font-size: 30px;
+}

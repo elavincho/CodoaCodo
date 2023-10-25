@@ -1,0 +1,67 @@
+html{
+    /*font-size: 20px;*/
+    font-size: 62.5%; /*Se usa este valor pq equivale a 10px, ya que el 100% serían 16px q es el valor por defecto, entonces es más fácil aplicar un valor al rem. que si pongo 1rem se que va a valer 10px*/
+}
+
+
+.cm{
+    font-size: 4cm;
+}
+
+.mm{
+    font-size: 5mm;
+}
+
+.px{
+    font-size: 15px;
+}
+
+.pt{
+    font-size: 10pt;
+}
+
+.in{
+    font-size: 1in;
+}
+
+.pc{
+    font-size: 1pc;
+}
+
+section{
+    font-size: 24px
+}
+
+.em{
+    font-size: 1.5em; /*La unidad em tiene como referencia de medida el font-size del elemento actual.*/
+}
+
+.rem{
+    font-size: 2rem; /*es en función al tamaño de lo que ponga en la etiqueta HTML, siempre se maneja por esa etiqueta, entonces no va sumando valores en cascada.
+    Puedo poner valores intermedios.
+    em es respecto al padre
+   tiene como referencia de medida el font-size del elemento root, la etiqueta <html>*/
+}
+
+
+/*Medidas flexibles (vw y vh) en texto*/
+/* v: viewport: ancho pantalla */
+.fuente-vw1{
+    font-size: 1vw;
+}
+
+.fuente-vw2{
+    font-size: 2vw;
+}
+
+.fuente-vw3{
+    font-size: 0.5vw;
+}
+
+
+/*Medidas flexibles (vw y vh) en imagen*/
+/*defino el viewport para que se adapte al tamaño de la pantalla*/
+img{
+    width: 50vw;
+    /*height: 30vh; /*si defino solo el widht, respeta el aspecto y no deforma la imagen*/
+}

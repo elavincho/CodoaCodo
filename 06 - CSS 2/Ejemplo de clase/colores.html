@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/colores.css">
+    <title>Colores</title>
+</head>
+
+<body>
+    <header>
+        <h1>Colores</h1>
+    </header>
+
+
+    <main>
+        <section>
+            <h2>Por nombre:</h2>
+            <p>Todos los navegadores modernos admiten 140 nombres de color. Para más información podés hacer clic
+                <a href="https://www.w3schools.com/colors/colors_hex.asp" target="_blank">aquí</a>
+            </p>
+            <h3 style="color: red"> color: red (Color rojo) </h3>
+            <h3 style="color: blue"> color: blue (Color azul)</h3>
+            <h3 style="color: green"> color: green (Color verde)</h3>
+            <h3 style="color: lightblue"> color: lightblue (Color celeste)</h3>
+            <hr>
+        </section>
+
+        <section>
+            <h2>Por valor hexadecimal:</h2>
+            <p>Los valores de color hexadecimales son compatibles con todos los navegadores.
+                Un color hexadecimal se especifica con: <b> #RRGGBB.</b><br>
+                <b>
+                    <span style="color: red">RR (rojo)</span>,
+                    <span style="color: green">GG (verde)</span> y
+                    <span style="color: blue">BB (azul)</span>
+                </b>
+                son números enteros hexadecimales entre 00 y FF que especifican la intensidad del color. <br>
+                Por ejemplo, #0000FF se muestra en azul, porque el componente azul está configurado en su valor más alto
+                (FF) y
+                los demás están configurados en 00. <br>
+                Para más información podés hacer clic
+                <a href="https://www.w3schools.com/colors/colors_hexadecimal.asp" target="_blank">aquí</a>
+            </p>
+            <h3 style="color: rgb(49, 7, 140)">Color #31078C</h3>
+            <h3 style="color: #495147">Color #FF0000</h3>
+            <p>También se puede dar <a href="https://www.esthersola.com/transparencia-color-hexadecimal/"
+                    target="_blank">transparencia a los colores hexadecimales.</a></p>
+            <hr>
+        </section>
+
+        <section>
+            <h2>Por RGB (Red, Green y Blue):</h2>
+            <p>Los valores de color RGB son compatibles con todos los navegadores.
+                Un valor de color RGB se especifica con:
+                <b>
+                    rgb(<span style="color: red">rojo</span>,
+                    <span style="color: green">verde</span> y
+                    <span style="color: blue">azul</span>).
+                </b> <br>
+                Cada parámetro (rojo, verde y azul) define la intensidad del color como un número entero entre 0 y 255.
+                <br>
+                Por ejemplo, rgb (0, 0, 255) se representa como azul, porque el parámetro azul se establece en su valor
+                más alto
+                (255) y los demás se establecen en 0. <br>
+                Para más información podés hacer clic
+                <a href="https://www.w3schools.com/colors/colors_rgb.asp" target="_blank">aquí</a>
+            </p>
+            <h3 style="color: rgb(0, 0, 0)">Color rgb(0, 0, 0)</h3>
+            <h3 style="color: rgb(255, 255, 255); background-color: grey;">Color rgb(255, 255, 255)</h3>
+            <h3 style="color: rgb(255, 0, 0)">Color rgb(255, 0, 0)</h3>
+            <h3 style="color: rgb(0, 255, 0)">Color rgb(0, 255, 0)</h3>
+            <h3 style="color: rgb(0, 0, 255)">Color rgb(0, 0, 255)</h3>
+            <h3 style="color: rgb(255, 255, 0)">Color rgb(255, 255, 0)</h3>
+            <h3 style="color: rgb(255, 0, 255)">Color rgb(255, 0, 255)</h3>
+            <h3 style="color: rgb(0, 255, 255)">Color rgb(0, 255, 255)</h3>
+            <hr>
+        </section>
+
+        <section>
+            <h2 class="subtitulo">Por RGB con canal alfa</h2>
+            <div style="margin-left: 30px;">
+                <h3 style="color: rgba(5, 173, 213, 1)">Color rgba(5, 173, 213, 1)</h3>
+                <h3 style="color: rgba(5, 173, 213, 0.75)">Color rgba(5, 173, 213, 0.75)</h3>
+                <h3 style="color: rgba(5, 173, 213, 0.5)">Color rgba(5, 173, 213, 0.5)</h3>
+                <h3 style="color: rgba(5, 173, 213, 0.25)">Color rgba(5, 173, 213, 0.25)</h3>
+            </div>
+
+            <hr>
+        </section>
+
+        <section>
+            <h2 class="subtitulo">Por rgb con canal alfa con %</h2>
+            <div style="margin-left: 30px;">
+                <h3 style="color: rgba(100%, 62.5%, 100%, 1)">Color rgba(100%, 62.5%, 100%, 1)</h3>
+                <h3 style="color: rgba(50%, 62.5%, 70%, 1)">Color rgba(50%, 62.5%, 70%, 1)</h3>
+                <h3 style="color: rgba(30%, 30%, 30%, 1)">Color rgba(30%, 30%, 30%, 1)</h3>
+                <h3 style="color: rgba(0%, 0%, 0%, 0.25)">Color rgba(0%, 0%, 0%, 0.25)</h3>
+            </div>
+            <hr>
+        </section>
+
+        <section>
+            <h2>Color de Fondo</h2>
+            <div class="fondo">
+                Soy un div con un fondo celeste!
+            </div>
+            <br>
+
+            <div class="fondo-imagen">    
+            </div>
+            <br>
+
+            <div class="fondo-imagen">    
+               
+            </div>
+        </section>
+
+    </main>
+</body>
+
+</html>
