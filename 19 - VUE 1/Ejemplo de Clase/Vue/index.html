@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro a VUE</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+<body>
+    
+    <h1>Comenzando con VUE</h1>
+
+    <div id="app">
+        <p> {{mensaje}} </p>
+        <p> Hola Comisión {{comision}} estamos aprendiendo Vue hoy {{dia}} </p>
+
+        <!-- V-text -->
+        <p>Vue fue desarrollado por <span v-text="desarrollador"></span> en el año <span v-text="anio"></span>.</p>
+
+        <!-- v-html -->
+        <div v-html="subtitulo"></div>
+
+        <!-- v-bind -->
+        <img v-bind:src="foto" alt="vue" width="100"> 
+        <a v-bind:href="url" class="enlace">Ir a Vue</a>
+
+        <!-- v-show -->
+        <h4 v-show="mostrar">Texto oculto</h4>
+        
+        
+
+
+    </div>
+
+
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./js/vue.js"></script>
+</body>
+</html>

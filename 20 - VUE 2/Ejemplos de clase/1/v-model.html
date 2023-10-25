@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-model</title>
+    <!-- La directiva v-model establece un enlace bidireccional, es decir, vincula el valor de los elementos HTML a los datos de la aplicación.-->
+</head>
+<body>
+    <div id="ejemplo">
+        <h2>Formulario de consulta</h2>
+        <form>
+            <label>Nombre:</label> 
+            <input v-model="nombre"> {{ nombre }}<br>
+            
+            <label>Apellido:</label>
+            <input v-model="apellido"> {{ apellido }}<br>
+            
+            <label>Edad:</label>
+            <input size="3" v-model="edad">
+        </form>
+        
+        <hr>
+        
+        <h2>Datos de su cursada</h2>
+        <p v-if="apellido!==''&&nombre!==''">Apellido y nombre: {{ apellido }}, {{ nombre }}</p>
+        
+        <p v-if="edad!==''">Edad: {{ edad }}</p>
+        
+        <div v-if="apellido!==''&&nombre!==''&&edad!==''">
+            <h4>Cursos modulo {{modulo}} </h4>
+            <ul>
+                <li v-for="curso in cursos">
+                    {{curso.nro}}: {{curso.nombre}}
+                </li> 
+            </ul>
+        </div>
+   
+    </div>
+    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="v-model.js"></script>
+</body>
+</html>

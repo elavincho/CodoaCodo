@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-on</title>
+    <!-- La directiva v-on (abreviada como @) es una directiva utilizada para gestionar los eventos del DOM desde los templates de Vue-->
+</head>
+
+<body>
+    <h1>Directiva v-on</h1>
+    <!-- Ejemplo 1 -->
+    <div id="von1">
+        <button v-on:click="contador++">+</button>
+        <button v-on:click="contador--">-</button>
+        <span> Clics: {{ contador }}</span>
+
+        <p v-if="contador<0">Contador negativo ({{ contador }})</p>
+        <p v-else-if="contador<=5">Se ha hecho clic en el botón de arriba {{ contador }} veces.</p>
+        <p v-else="contador>5">Demasiados intentos: {{ contador }}</p>
+    
+    </div>
+    <hr>
+    <!-- Ejemplo 2: con métodos -->
+    <div id="von2">
+        <input type="text" v-model="nuevaFruta">
+        <button v-on:click=agregarFruta()>Clic para agregar fruta</button>
+        <ul>
+            <li v-for="fruta in frutas">
+                {{ fruta.nombre }} - {{ fruta.cantidad }}
+            </li>
+        </ul>
+    </div>
+    <hr>
+    <!-- Ejemplo 3: mejora del ejemplo anterior -->
+    <div id="von3">
+        <h1>{{titulo}}</h1>
+        <h2>{{subtitulo}}</h2>
+        Escriba un producto:
+        <input type="text" v-model="nuevoProducto">
+        <!-- <input type="text" v-model="nuevoProducto" @keydown.Enter="agregarProductoConIf()"> -->
+        <button v-on:click=agregarProducto()>Agregar</button>
+        
+        <button v-on:click=agregarProductoConIf()>Agregar (condicional)</button>
+        <span v-show="aviso" style="color:red;">Falta producto!</span>
+        <ul>
+            <li v-for="producto in productos"> 
+                {{ producto.nombre }} - {{ producto.cantidad }} 
+            </li>
+        </ul>
+
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="v-on.js"></script>
+</body>
+
+</html>

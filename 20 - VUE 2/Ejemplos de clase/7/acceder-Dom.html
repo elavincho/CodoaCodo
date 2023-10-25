@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceder al DOM</title>
+</head>
+<body>
+    <h1>Acceder a los elementos del DOM utilizando $refs</h1>
+    <div id="ejemplo1">
+        <input type="text" ref="text">
+        <br><br>
+        <button type="button" @click="addText">Guardar</button>
+        <button type="button" @click="deleteText">Borrar</button>
+        <p ref="textField"></p>
+    </div>
+    
+    
+    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="acceder-Dom.js"></script>
+</body>
+</html>

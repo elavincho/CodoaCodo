@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computados 2</title>
+</head>
+
+<body>
+    <h1>Campos computados II</h1>
+    <div id="computados2">
+        Escriba un producto:
+        <input type="text" v-model="nuevoProducto" @keydown.Enter="agregarProductoConIf()">
+        <button v-on:click=agregarProductoConIf()>Agregar</button>
+        <span v-show="aviso" style="color:red;">Falta producto!</span>
+        <ul>
+            <li v-for="producto in productos"> 
+                <!-- {{ producto.nombre }} - <input type="number" v-model.number="producto.cantidad"> -->
+                {{ producto.nombre }} - {{ producto.cantidad }}
+                <button @click=producto.cantidad++>+</button>
+                <button @click=producto.cantidad-->-</button>
+            </li>
+        </ul>
+        <h4>Total de productos: {{sumarProductos}}</h4>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="computados-2.js"></script>
+</body>
+
+</html>

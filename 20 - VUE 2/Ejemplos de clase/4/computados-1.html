@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computados</title>
+    <!-- Son funciones que tienen la posibilidad de hacer operaciones matemáticas. Se van a ejecutar cuando haya un cambio en el HTML -->
+</head>
+
+<body>
+    <h1>Campos computados</h1>
+    <div id="computados1">
+        Escriba un producto:
+        <input type="text" v-model="nuevoProducto" @keydown.Enter="agregarProductoConIf()">
+        <button v-on:click=agregarProductoConIf()>Agregar</button>
+        <span v-show="aviso" style="color:red;">Falta producto!</span>
+        <ul>
+            <li v-for="producto in productos"> 
+                {{ producto.nombre }} - {{ producto.cantidad }} 
+            </li>
+        </ul>
+        <h4>Total: {{sumarProductos}}</h4>
+        
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="computados-1.js"></script>
+</body>
+
+</html>
