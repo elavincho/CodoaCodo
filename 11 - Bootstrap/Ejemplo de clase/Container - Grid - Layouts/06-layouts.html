@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Layouts</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1>Diferentes layouts para dispositivos</h1>
+    <h2>Ejemplo 1: dos columnas en container</h2>
+    <div class="container">
+        <div class="row">
+            <h4>col-sm-6</h4>
+            <p>¿Cómo se lee esto?: Decimos que "desde small (576px)" dividime en 2 columnas de 6 y 6</p>
+            <div class="col-sm-6 bg-success">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, sit temporibus dolores corrupti odit eligendi voluptatem explicabo soluta assumenda perspiciatis modi maiores quos tempore tempora totam facilis? Rerum, nesciunt animi.</p>
+            </div>
+            <div class="col-sm-6 bg-warning">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, sit temporibus dolores corrupti odit eligendi voluptatem explicabo soluta assumenda perspiciatis modi maiores quos tempore tempora totam facilis? Rerum, nesciunt animi.</p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <h2>Ejemplo 2: dos columnas iguales en container-fluid</h2>
+    <div class="container-fluid">
+        <div class="row">
+            <h4>col-sm-6</h4>
+            <p>¿Cómo se lee esto?: Decimos que "desde small (576px)" dividime en 2 columnas de 6 y 6</p>
+            <div class="col-sm-6 bg-success">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est inventore iusto deserunt quis doloribus consequatur at facere molestiae ipsa asperiores.</p>
+            </div>
+            <div class="col-sm-6 bg-warning">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est inventore iusto deserunt quis doloribus consequatur at facere molestiae ipsa asperiores.</p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <h2>Ejemplo 3: dos columnas diferentes en container-fluid</h2>
+    <p>Las columnas se adaptan al ancho del viewport en tamaños <b>sm</b> y <b>lg</b></p>
+    <div class="container-fluid">
+        <p> Este ejemplo demuestra las siguientes divisiones: </p>
+        <ul>
+            <li>Una división de 6 a 6 (50 %) en dispositivos extra pequeños (hasta 576 px)</li>
+            <li>Una división de 8 a 4 (67 % y 33 %) en dispositivos sm (small, desde 576 px en adelante)</li>
+            <li>Una división de 10 a 2 (84 % y 16 %) en dipositivos lg (large, desde 992 px en adelante)</li>
+        </ul>
+        <div class="row">
+            <div class="col-6 col-sm-8 col-lg-10 bg-primary">
+                <p>col-6 <br> col-sm-8 <br> col-lg-10</p>
+            </div>
+            <div class="col-6 col-sm-4 col-lg-2 bg-warning">
+                <p>col-6 <br> col-sm-4 <br> col-lg-2</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

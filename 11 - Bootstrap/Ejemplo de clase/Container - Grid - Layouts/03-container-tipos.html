@@ -1,0 +1,120 @@
+<!-- Container  fluid -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tipos de contenedores</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <style>
+        .borde {border: 1px black solid;}
+        .centrado{text-align: center;}
+        .verde-claro{background-color:lightgreen;}
+        .azul-claro{background-color:lightblue;}
+    </style>
+</head>
+
+<body>
+    <!-- Bootstrap 5 requiere un elemento contenedor para envolver el contenido del sitio. -->
+
+    <!-- La clase .container proporciona un contenedor de ancho fijo sensible -->
+    <div class="container">
+        <h1> Tres columnas de igual ancho en una clase container</h1>
+        <p> Nota: intente agregar un nuevo div con class = "col" dentro de la clase de row; esto creará 4 columnas de
+            igual ancho. </p>
+        <div class="row">
+            <div class="col verde-claro">.col</div>
+            <div class="col azul-claro">.col</div>
+            <div class="col verde-claro">.col</div>
+            <!-- <div class="col azul-claro">.col</div> -->
+        </div>
+    </div>
+    <br><br>
+
+    <!-- La clase .container-fluid proporciona un contenedor de ancho completo, que abarca todo el ancho de la ventana gráfica. -->
+    <div class="container-fluid">
+        <h1> Tres columnas de igual ancho en una clase container-fluid</h1>
+        <p> Nota: intente agregar un nuevo div con class = "col" dentro de la clase de row; esto creará 4 columnas de igual ancho. </p>
+        <div class="row">
+            <div class="col verde-claro">.col</div>
+            <div class="col azul-claro">.col</div>
+            <div class="col verde-claro">.col</div>
+            <!-- <div class="col azul-claro">.col</div> -->
+        </div>
+        <br>
+        <div class="row">
+            <div class="col verde-claro">.col</div>
+            <div class="col azul-claro">.col</div>
+        </div>
+    </div>
+    <br><br>
+    <!-- .container- {breakpoint}, que tiene un ​width: 100% ​hasta el breakpoint especificado. -->
+    <div class="container">
+        <h1> Cuatro columnas de igual ancho en una clase container-{breakpoint}</h1>
+        <p> Nota: container- {breakpoint}, que tiene un Width: 100% <b> hasta el breakpoint especificado</b>.
+    </div>
+    <div class="container-sm">
+        <h3>class="container-sm"</h3>
+        <div class="row">
+            <div class="col borde centrado verde-claro">1</div>
+            <div class="col borde centrado azul-claro">2</div>
+            <div class="col borde centrado verde-claro">3</div>
+            <div class="col borde centrado azul-claro">4</div>
+        </div>
+    </div>
+    <div class="container-md">
+        <h3>class="container-md"</h3>
+        <div class="row">
+            <div class="col borde centrado verde-claro">1</div>
+            <div class="col borde centrado azul-claro">2</div>
+            <div class="col borde centrado verde-claro">3</div>
+            <div class="col borde centrado azul-claro">4</div>
+        </div>
+    </div>
+    <div class="container-lg">
+        <h3>class="container-lg"</h3>
+        <div class="row">
+            <div class="col borde centrado verde-claro">1</div>
+            <div class="col borde centrado azul-claro">2</div>
+            <div class="col borde centrado verde-claro">3</div>
+            <div class="col borde centrado azul-claro">4</div>
+        </div>
+    </div>
+    <div class="container-xl">
+        <h3>class="container-xl"</h3>
+        <div class="row">
+            <div class="col borde centrado verde-claro">1</div>
+            <div class="col borde centrado azul-claro">2</div>
+            <div class="col borde centrado verde-claro">3</div>
+            <div class="col borde centrado azul-claro">4</div>
+        </div>
+    </div>
+    <div class="container-xxl">
+        <h3>class="container-xxl"</h3>
+        <div class="row">
+            <div class="col borde centrado verde-claro">1</div>
+            <div class="col borde centrado azul-claro">2</div>
+            <div class="col borde centrado verde-claro">3</div>
+            <div class="col borde centrado azul-claro">4</div>
+        </div>
+    </div>
+    <br><br>
+    <div class="container">
+        <h1>Uso de la clase w-100</h1>
+        <p> Nota: Intente comentar la línea del w-100 para ver cómo se comporta el salto de línea </p>
+        <div class="row">
+            <div class="col borde centrado verde-claro">1</div>
+            <div class="col borde centrado azul-claro">2</div>
+            <!-- La clase "w-100" establece un "punto de quiebre o breakpoint"-->
+            <div class="w-100">Ocupa el 100% del ancho del contenedor</div>
+            <div class="col borde centrado verde-claro">3</div>
+            <div class="col borde centrado azul-claro">4</div>
+        </div>
+        <br>
+        <p> Más info clic <a href="https://getbootstrap.com/docs/5.0/layout/containers/#how-they-work" target="_blank">Aquí</a></p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Online</title>
+
+    <!-- 1-Agrego una etiqueta link y en href pego la URL CDN Links desde https://getbootstrap.com/docs/5.2/getting-started/introduction/ -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <!-- 2-Agrego un titulo para ver cómo toma la tipografía  -->
+    <header>
+        <h1>Bootstrap Online</h1>
+
+        <!-- 3-Agrego un nav y voy a la sección de Buttons y copio/pego https://getbootstrap.com/docs/5.2/components/buttons/-->
+        <nav>
+            <button type="button" class="btn btn-primary">Primary</button>
+            <button type="button" class="btn btn-secondary">Secondary</button>
+            <button type="button" class="btn btn-success">Success</button>
+            <button type="button" class="btn btn-danger">Danger</button>
+            <button type="button" class="btn btn-warning">Warning</button>
+            <button type="button" class="btn btn-info">Info</button>
+            <button type="button" class="btn btn-light">Light</button>
+            <button type="button" class="btn btn-dark">Dark</button>
+
+            <button type="button" class="btn btn-link">Link</button>
+        </nav>
+    </header>
+
+    <!-- 4-Agrego el main y me copio/pego una tarjeta https://getbootstrap.com/docs/5.2/components/card/ -->
+    <main>
+        <br>
+        <h2>Tarjeta</h2>
+        <div class="card" style="width: 18rem;">
+            <img src="img/html5.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        
+        <h2>Formulario</h2>
+        <div class="container">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+        </div>
+
+    </main>
+
+</body>
+
+</html>
