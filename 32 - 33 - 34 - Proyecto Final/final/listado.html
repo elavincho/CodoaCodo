@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Productos</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <h1>Listado de Productos</h1>
+    <h3>Codo a Codo 2023</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Descripción</th>
+                <th>Cantidad</th>                
+                <th align="right">Precio</th>
+                <th>Imagen</th>
+                <th align="right">Proveedor</th>
+                
+            </tr>
+        </thead>
+        <tbody id="tablaProductos"> </tbody>
+    </table>
+
+    <div class="contenedor-centrado">
+        <a href="index.html">Menu principal</a>
+    </div>
+
+    <script>
+        const URL = "http://127.0.0.1:5000/"
+
+        // Realizamos la solicitud GET al servidor para obtener todos los productos
+        fetch(URL + 'productos')
+            .then(function (response) {
+                if (response.ok) {
+                    return response.json(); 
+            } else {
+                    // Si hubo un error, lanzar explícitamente una excepción
+                    // para ser "catcheada" más adelante
+                    throw new Error('Error al obtener los productos.');
+                }
+            })
+            .then(function (data) {
+                let tablaProductos = document.getElementById('tablaProductos');
+
+                // Iteramos sobre los productos y agregamos filas a la tabla
+                for (let producto of data) {
+                    let fila = document.createElement('tr');
+                    fila.innerHTML = '<td>' + producto.codigo + '</td>' +
+                        '<td>' + producto.descripcion + '</td>' +
+                        '<td align="right">' + producto.cantidad + '</td>' +
+                        '<td align="right">' + producto.precio + '</td>' +
+                        // Mostrar miniatura de la imagen
+                        '<td><img src=./static/imagenes/' + producto.imagen_url +' alt="Imagen del producto" style="width: 100px;"></td>' +
+                        '<td align="right">' + producto.proveedor + '</td>';
+                    
+                    //Una vez que se crea la fila con el contenido del producto, se agrega a la tabla utilizando el método appendChild del elementotablaProductos.
+                    tablaProductos.appendChild(fila);
+                }
+            })
+            .catch(function (error) {
+                // Código para manejar errores
+                alert('Error al obtener los productos.');
+            });
+    </script>
+</body>
+</html>
