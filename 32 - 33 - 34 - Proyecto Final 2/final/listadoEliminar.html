@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Productos</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <h1>Baja de Productos</h1>
+    <h3>Codo a Codo 2023</h3>
+    <table> <!-- Se crea una tabla para mostrar los productos. -->
+        <thead> <!--Encabezado de la tabla con columnas para código, descripción, cantidad, precio y acciones.-->
+            <tr>
+                <th>Código</th>
+                <th>Descripción</th>
+                <th>Cantidad</th>
+                <th align="right">Precio</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Se utiliza la directiva v-for de Vue.js para iterar sobre el array de productos (productos) y crear una fila por cada producto. -->
+            <tr v-for="producto in productos">
+                <td>{{ producto.codigo }}</td>
+                <td>{{ producto.descripcion }}</td>
+                <td>{{ producto.cantidad }}</td>
+                <td align="right">{{ producto.precio }}</td>
+                <!-- Se agrega un botón dentro de cada fila que, cuando se hace clic, activa la función eliminarProducto de Vue.js, pasando como argumento el código del producto. -->
+                <td><button @click="eliminarProducto(producto.codigo)">Eliminar</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="contenedor-centrado">
+        <a href="index.html">Menu principal</a>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        const URL = "http://127.0.0.1:5000/"
+
+        //Al subir al servidor, deberá utilizarse la siguiente ruta. USUARIO debe ser reemplazado por el nombre de usuario de Pythonanywhere
+        //const URL = "https://USUARIO.pythonanywhere.com/"
+        
+
+        //Vue.createApp para crear nuestra aplicación Vue.
+        //Define una propiedad productos en el estado de la aplicación Vue. Inicialmente, es un array vacío que almacenará los datos de los productos obtenidos del servidor.
+        const app = Vue.createApp({
+            data() {
+                return {
+                    productos: []
+                }
+            },
+            methods: {
+                // El método obtenerProductos se utiliza para obtener los productos del servidor. 
+                obtenerProductos() {
+                    // Obtenemos el contenido del inventario
+                    fetch(URL + 'productos') //Realiza una solicitud GET al servidor y obtener la lista de productos.
+                        .then(response => {
+                             // Si es exitosa (response.ok), convierte los datos de la respuesta de formato JSON a un objeto JavaScript.
+                            if (response.ok) { return response.json();}
+                        })
+
+                        //Asigna los datos de los productos obtenidos a la propiedad productos del estado de Vue.
+                        .then(data => {
+                            // El código Vue itera este elemento para generar la tabla
+                            this.productos = data;
+                        })
+
+                        //Captura y maneja errores, mostrando una alerta en caso de error al obtener los productos.
+                        .catch(error => {
+                            console.log('Error:', error);
+                            alert('Error al obtener los productos.');
+                        });
+                },
+
+                //Se utiliza para eliminar un producto.
+                eliminarProducto(codigo) {
+                    //Se muestra un diálogo de confirmación. Si el usuario confirma, se realiza una solicitud DELETE al servidor a través de fetch(URL + 'productos/${codigo}', {method: 'DELETE' }).
+                    if (confirm('¿Estás seguro de que quieres eliminar este producto?')) {
+                        fetch(URL + `productos/${codigo}`, { method: 'DELETE' })
+                            .then(response => {
+                                if (response.ok) {
+                                    // Si es exitosa (response.ok), elimina el producto y da mensaje de ok.
+                                    this.productos = this.productos.filter(producto => producto.codigo !== codigo);
+                                    alert('Producto eliminado correctamente.');
+                                }
+                            })
+
+                            // En caso de error, mostramos una alerta con un mensaje de error.
+                            .catch(error => {
+                                alert(error.message);
+                            });
+                    }
+                }
+            },
+
+            //Una vez iniciada la app de Vue, se carga el método mounted()
+            mounted() {
+                //Se llama al método obtenerProductos para cargar la lista de productos cuando la página se carga por primera vez.
+                this.obtenerProductos();
+            }
+        });
+
+        //Monta la aplicación Vue en el elemento <body> del DOM. Esto activa Vue en la página, haciendo que sea reactivo y maneje el contenido dinámicamente según los datos y las interacciones del usuario.
+        app.mount('body');
+    </script>
+</body>
+</html>
